@@ -13,7 +13,25 @@ this makes sense.
 */
 
 .container {
-  background-color: pink;
+  /* background-color: hsl(185, 75%, 39%); */
+
+  /*    
+  background shorthand for:
+  - background-color
+  - background-image
+  - background-repeat
+  - background-position
+  */
+
+  background: 
+    url('../public/bg-pattern-top.svg') no-repeat,
+    url('../public/bg-pattern-bottom.svg') no-repeat;
+  
+  /* background-color: hsl(185, 75%, 39%); */
+  background-color: var(--dark-cyan);
+  
+  background-position: top -45vh right 55vw, left 50vw top 50vh;
+
   min-height: 100vh;
 
 /* using css grid */
@@ -33,7 +51,11 @@ this makes sense.
 }
 
 .main {
-  background-color: red;
+  background-color:white;
+  background-image: url('../public/bg-pattern-card.svg');
+  background-position: top;
+  background-repeat: no-repeat;
+
   border-radius: 20px;
   width: 326px;
   height: 374px;
@@ -46,8 +68,13 @@ this makes sense.
 }
 
 .imagewrapper img {
-  border-radius: 50%;
+  border-radius: 90%;
   /* margin-right: auto; */
+  /* border: 10px solid white; */
+}
+
+.header h1 {
+  font-size: 1.0rem;
 }
 
 .stats {
@@ -56,5 +83,23 @@ this makes sense.
   align-content: center;
   /* text-align: center; */
   /* place-items: center; */
+  border-top: 1px solid var(--dark-gray);
+  margin-top: 1rem;
+}
 
+.age {
+  font-weight: 400;
+  color: var(--dark-grayish-blue)
+
+}
+
+.city {
+  font-weight: 400;
+  color: var(--dark-grayish-blue)
+}
+
+.metric {
+  font-weight: 400;
+  color: var(--dark-grayish-blue);
+  font-size: 0.6rem;
 }

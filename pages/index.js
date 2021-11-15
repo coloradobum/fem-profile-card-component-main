@@ -1,6 +1,8 @@
 import Head from 'next/head'
 import Image from 'next/image'
 import profilePic from '../public/image-victor.jpg'
+import backgroundImgTop from '../public/bg-pattern-top.svg'
+import backgroundImgBtm from '../public/bg-pattern-bottom.svg'
 import styles from '../styles/Home.module.css'
 
 export default function Home() {
@@ -24,23 +26,23 @@ export default function Home() {
             </div>
           </div>
 
-          <div>
-            <h1>Victor Crest 26</h1>
-            <p>London</p>
+          <div className={styles.header}>
+            <h1>Victor Crest <span className={styles.age}>26</span></h1>
+            <p className={styles.city}>London</p>
           </div>
 
           <div className={styles.stats}>
             <div>
               <div>80K</div>
-              <div>Followers</div>
+              <div className={styles.metric}>Followers</div>
             </div>
             <div>
               <div>803K</div>
-              <div>Likes</div>
+              <div className={styles.metric}>Likes</div>
             </div>
             <div>
               <div>1.4K</div>
-              <div>Photos</div>
+              <div className={styles.metric}>Photos</div>
             </div>
           </div>
 
